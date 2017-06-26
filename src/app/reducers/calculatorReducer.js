@@ -1,5 +1,6 @@
 import {
-  UPDATE_HISTORY
+  UPDATE_HISTORY,
+  RECEIVE_RESULT
 } from '../actionTypes'
 
 const initialState = {
@@ -11,6 +12,8 @@ const initialState = {
 export default (state = initialState, action ) => {
   if (action.type === UPDATE_HISTORY){
     return state
+  } else if (action.type === RECEIVE_RESULT){
+    return {...state, result: action.payload.result}
   } else {
     return state
   }
