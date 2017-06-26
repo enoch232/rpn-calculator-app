@@ -5,8 +5,7 @@ import CalculatorContainer from './containers/CalculatorContainer'
 import { createStore, applyMiddleware, combineReducers } from 'redux'
 import createLogger from 'redux-logger'
 import createSagaMiddleware from 'redux-saga'
-// import rootSaga from './rootSaga'
-import { evaluateExpressionSaga }from './sagas/calculatorSaga'
+import rootSaga from './rootSaga'
 const loggerMiddleware = createLogger();
 const sagaMiddleware = createSagaMiddleware();
 
@@ -19,7 +18,7 @@ export const store =
     applyMiddleware(loggerMiddleware, sagaMiddleware)
   )
 
-sagaMiddleware.run(evaluateExpressionSaga);
+sagaMiddleware.run(rootSaga);
 
 export default () => (
   <Provider store={store}>
