@@ -12,8 +12,11 @@ export const evaluateExpression = (expression, expressionType) => ({
   }
 })
 
-export const updateHistory = () => ({
+export const updateHistory = (expression) => ({
   type: UPDATE_HISTORY,
+  payload: {
+    expression
+  }
 })
 
 export const receiveResult = (result) => ({

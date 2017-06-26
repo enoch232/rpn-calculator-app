@@ -11,7 +11,7 @@ const initialState = {
 
 export default (state = initialState, action ) => {
   if (action.type === UPDATE_HISTORY){
-    return state
+    return {...state, history: state.history.concat(action.payload.expression)}
   } else if (action.type === RECEIVE_RESULT){
     return {...state, result: action.payload.result}
   } else {

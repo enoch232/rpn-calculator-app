@@ -1,6 +1,7 @@
 import API from '../../config/api'
 import {
-  receiveResult
+  receiveResult,
+  updateHistory
 } from '../actions/calculatorActions'
 import {
   EVALUATE_EXPRESSION
@@ -21,6 +22,7 @@ export function * evaluateExpressionSaga(){
 
       if (result.result){
         yield put(receiveResult(result.result))
+        yield put(updateHistory(result.result))
       } else {
         alert("Failed to evaluate that expression!")
       }
