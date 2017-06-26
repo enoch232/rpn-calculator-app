@@ -4,10 +4,11 @@ import {
   RECEIVE_RESULT
 } from '../actionTypes'
 
-export const evalulateExpression = (expression) => ({
+export const evaluateExpression = (expression, expressionType) => ({
   type: EVALUATE_EXPRESSION,
   payload: {
-    expression
+    expression,
+    expressionType
   }
 })
 

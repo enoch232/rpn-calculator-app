@@ -1,7 +1,5 @@
-import { calculatorSaga } from './sagas/calculatorSaga'
+import { evaluateExpressionSaga } from './sagas/calculatorSaga'
 
 export default function* rootSaga(){
-  yield [
-    calculatorSaga()
-  ]
+  evaluateExpressionSaga()
 }
