@@ -1,12 +1,13 @@
 import {
   UPDATE_HISTORY,
-  RECEIVE_RESULT
+  RECEIVE_RESULT,
+  CHANGE_EXPRESSION_TYPE
 } from '../actionTypes'
 
 const initialState = {
   result: "",
   history: [],
-  expressionType: ""
+  expressionType: "RPN"
 }
 
 export default (state = initialState, action ) => {
