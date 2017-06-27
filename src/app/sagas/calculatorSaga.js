@@ -23,8 +23,10 @@ export function * evaluateExpressionSaga(){
       if (result.result){
         yield put(receiveResult(result.result))
         yield put(updateHistory(result.result))
+      } else if (result.error){
+        alert(result.message)
       } else {
-        alert("Failed to evaluate that expression!")
+        alert("Unknown Error!")
       }
     } catch (error) {
       alert(error)

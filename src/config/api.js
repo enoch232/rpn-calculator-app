@@ -3,7 +3,7 @@ import { SITE_URL } from './settings'
 export default API = (function(){
 
   function evaluateExpression(expression, expressionType){
-    return fetch(SITE_URL + '/evaluate', {
+    return fetch(SITE_URL + 'evaluate', {
             method: 'POST',
             headers: {
               'Accept':'application/json',
