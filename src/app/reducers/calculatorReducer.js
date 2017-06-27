@@ -5,7 +5,8 @@ import {
 
 const initialState = {
   result: "",
-  history: []
+  history: [],
+  expressionType: ""
 }
 
 export default (state = initialState, action ) => {
@@ -13,6 +14,8 @@ export default (state = initialState, action ) => {
     return {...state, history: state.history.concat(action.payload.expression)}
   } else if (action.type === RECEIVE_RESULT){
     return {...state, result: action.payload.result}
+  } else if (action.type === CHANGE_EXPRESSION_TYPE){
+    return {...state, expressionType: action.payload.expressionType}
   } else {
     return state
   }

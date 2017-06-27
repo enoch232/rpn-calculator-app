@@ -1,7 +1,8 @@
 import {
   EVALUATE_EXPRESSION,
   UPDATE_HISTORY,
-  RECEIVE_RESULT
+  RECEIVE_RESULT,
+  CHANGE_EXPRESSION_TYPE
 } from '../actionTypes'
 
 export const evaluateExpression = (expression, expressionType) => ({
@@ -23,5 +24,12 @@ export const receiveResult = (result) => ({
   type: RECEIVE_RESULT,
   payload: {
     result
+  }
+})
+
+export const changeExpressionType = (expressionType) => ({
+  type: CHANGE_EXPRESSION_TYPE,
+  payload: {
+    expressionType
   }
 })
