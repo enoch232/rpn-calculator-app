@@ -1,19 +1,29 @@
-## Install React Native:
-- In terminal, go to the directory to clone the project and run this command:
+# Readme
+
+## Prerequisite:
+
+Make sure you have CLI-RPN Server running. https://github.com/enoch232/CLI-RPN
+This mobile application will need to use CLI-RPN Server as an API.
+Currently, it's been tested on iPhone Simulator only.
+
+## Installation:
+
+In terminal, go to the directory to clone the project and run this command:
 ```
 git clone https://github.com/enoch232/rpn-calculator-app.git
 ```
 
-- Install node with brew if you haven't:
+Install node with brew if you haven't:
 ```
 brew install node
 ```
-- Make sure you're in rpn-calculator-app directory now, then type:
+
+Make sure you're in rpn-calculator-app directory now, then type:
 ```
 npm install
 ```
 
-- Install Xcode from App Store.
+Install Xcode from App Store.
 
 ## Run/Debug App:
 
